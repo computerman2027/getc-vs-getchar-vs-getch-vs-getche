@@ -94,6 +94,15 @@ bBYE
 ## What is Input Buffer?
 The input buffer is a temporary storage area in memory where user input is stored before being processed by the program. When a user types characters and presses `Enter`, all the characters are stored in the input buffer. Functions like `getc()` and `getchar()` retrieve characters one by one from this buffer. If multiple characters are entered, the first function call retrieves the first character, and subsequent calls retrieve the next characters without requiring further user input. The buffer is cleared when all characters are read or explicitly flushed.
 
+## Comparison Table
+| Function  | Header File  | Buffered Input | Requires Enter | Displays Input | Used in Modern Compilers |
+|-----------|-------------|---------------|---------------|---------------|------------------------|
+| `getc()`  | `<stdio.h>`  | Yes           | Yes           | Yes           | Yes                    |
+| `getchar()` | `<stdio.h>`  | Yes           | Yes           | Yes           | Yes                    |
+| `getch()`  | `<conio.h>`  | No            | No            | No            | No (not standard)      |
+| `getche()` | `<conio.h>`  | No            | No            | Yes           | No (not standard)      |
+
+
 ## Conclusion
 - `getc()` and `getchar()` are buffered, requiring `Enter`.
 - `getch()` and `getche()` capture key presses instantly, but `getch()` does not display input.
